@@ -9,7 +9,7 @@ Installation Procedure
 At first, you will have to install git on your system.<br>
 
 ```
-apt install git -y
+sudo apt install git -y
 ```
 <br><br>Once git is installed, you are ready to clone my script!<br>
 
