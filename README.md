@@ -14,7 +14,7 @@ sudo apt install git -y
 <br><br>Once git is installed, you are ready to clone my script!<br>
 
 ```
-git clone https://github.com/MHaasjes/<xxxxxxxxxx>.git
+git clone https://github.com/MHaasjes/pve-installer-rpi.git
 ```
 <br><br>
 Then, enter to the directory and change the permission.<br><br>
