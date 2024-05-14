@@ -21,9 +21,9 @@ Then, enter to the directory and change the permission.<br><br>
 ```
 cd proxmox
 
-chmod +x install.sh
+chmod +x pve-installer-rpi-xx-xx-xxxx.sh
 
-./install.sh
+./pve-installer-rpi-xx-xx-xxxx.sh
 ```
 <br><br>
 At the end, please visit your web browser for ``https://your_ip_address:8006`` further configuration.<br>
