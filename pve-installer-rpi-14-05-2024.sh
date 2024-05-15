@@ -67,7 +67,7 @@ echo "The /etc/hosts file has been updated successfully."
 
 # You need to set the root password for access to Proxmox
 echo "You need to set the root password for access to Proxmox"
-#sudo passwd root
+sudo passwd root
 
 # Adding the Proxmox Ports repository
 echt "Adding the Proxmox Ports repository"
