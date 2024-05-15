@@ -35,7 +35,9 @@ fi
 # Remove the backup file
 rm /etc/hosts.bak
 
-sudo hostname $newservername
+sudo hostname "$newservername"
+
+sudo apt update -y && sudo apt upgrade -y
 
 echo "The /etc/hosts file has been updated successfully."
 
