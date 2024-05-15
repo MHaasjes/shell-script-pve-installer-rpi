@@ -6,6 +6,22 @@ if [ $(whoami) != "root" ]; then
   exit 1
 fi
 
+# Ask the user for the new server ip address
+echo "Enter the ip address for the new server:"
+read newipserver
+
+# Validate the user's input
+if [ -z "$newipserver" ]; then
+  echo "You did not enter a server ip address. The script is stopping."
+  exit 1
+fi
+
+sudo nmcli c mod "Wired connection 1" ipv4.addresses $newipserver/24 ipv4.method manual
+sudo nmcli con mod "Wired connection 1" ipv4.gateway 192.168.1.1
+sudo nmcli con mod "Wired connection 1" ipv4.dns 8.8.8.8
+sudo nmcli c down "Wired connection 1" && sudo nmcli c up "Wired connection 1"
+
+
 # Ask the user for the new server name
 echo "Enter the new server name:"
 read newservername
@@ -34,6 +50,8 @@ fi
 
 # Remove the backup file
 rm /etc/hosts.bak
+
+sudo hostname $newservername
 
 echo "The /etc/hosts file has been updated successfully."
 
