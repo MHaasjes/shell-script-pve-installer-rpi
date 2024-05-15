@@ -16,8 +16,8 @@ if [ -z "$newipserver" ]; then
   exit 1
 fi
 
-# Ask the user for the new server ip address
-echo "Enter the ip address for the new server:"
+# Ask the user for the new gateway ip address
+echo "Enter the ip address for the new gateway:"
 read newipgateway
 
 # Validate the user's input
