@@ -52,4 +52,5 @@ To do:
 - Cleanup scripts
 - Better/more info per step in the scripts
 - Cleanup README.md
+- Test on Raspberry pi 4
 
