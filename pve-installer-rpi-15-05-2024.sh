@@ -23,6 +23,8 @@ cp /etc/hosts /etc/hosts.bak
 # Edit the /etc/hosts file with the new server name
 sudo sed -i "s/localhost/$newservername/g" /etc/hosts
 
+sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
+
 # Check if the change was successful
 if grep "$newservername" /etc/hosts; then
   echo "The line has been changed successfully to '$newservername'."
