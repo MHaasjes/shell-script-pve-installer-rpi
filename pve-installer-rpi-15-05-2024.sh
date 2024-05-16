@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Check if the user has root privileges
+# Check Root Privileges
+
 if [ $(whoami) != "root" ]; then
-  echo "This script must be run with root privileges."
+  echo "This script must be run with root privileges. Please use 'sudo' before running it again."
   exit 1
 fi
 
