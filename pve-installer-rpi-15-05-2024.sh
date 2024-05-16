@@ -25,6 +25,8 @@ sudo sed -i "s/localhost/$newservername/g" /etc/hosts
 
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
 
+sudo sed -i "s/raspberrypi/$newservername/g" /etc/hostname
+
 # Check if the change was successful
 if grep "$newservername" /etc/hosts; then
   echo "The line has been changed successfully to '$newservername'."
