@@ -1,4 +1,3 @@
-l01$
 #!/bin/bash
 
 # Check if the user has root privileges
