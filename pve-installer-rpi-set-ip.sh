@@ -26,6 +26,21 @@ if [ -z "$newipgateway" ]; then
   exit 1
 fi
 
+# Create a backup of the /etc/hosts file
+cp /etc/hosts /etc/hosts.bak
+
+# Edit the /etc/hosts file with the new server name
+sudo sed -i "s/127.0.0.1/$newipserver/g" /etc/hosts
+
+# Check if the change was successful
+if grep "$newipserver" /etc/hosts; then
+  echo "The line has been changed successfully to '$newipserver'."
+else
+  echo "An error occurred while changing the line."
+  # Restore the backup if there was an error
+  cp /etc/hosts.bak /etc/hosts
+  exit 1
+fi
 sudo nmcli c mod "Wired connection 1" ipv4.addresses "$newipserver"/24 ipv4.method manual
 sudo nmcli con mod "Wired connection 1" ipv4.gateway "$newipgateway"
 sudo nmcli con mod "Wired connection 1" ipv4.dns 8.8.8.8
