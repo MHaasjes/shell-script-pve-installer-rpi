@@ -27,7 +27,7 @@ Then, enter to the directory and change the permission.<br><br>
 ```
 cd pve-installer-rpi
 
-sudo chmod +x pve-installer-rpi-xx-xx-xxxx.sh
+sudo chmod +x pve-installer-rpi.sh
 ```
 ```
 sudo chmod +x pve-installer-rpi-set-ip.sh
@@ -38,7 +38,7 @@ sudo ./pve-installer-rpi-set-ip.sh
 ```
 Now install Proxmox VE
 ```
-sudo ./pve-installer-rpi-xx-xx-xxxx.sh
+sudo ./pve-installer-rpi.sh
 ```
 <br><br>
 At the end, please visit your web browser for ``https://your_ip_address:8006`` further configuration.<br>
