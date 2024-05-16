@@ -46,3 +46,10 @@ sudo ./pve-installer-rpi.sh
 At the end, please visit your web browser for ``https://your_ip_address:8006`` further configuration.<br>
 
 You will be required for username and password authentication which is root and the root password.
+
+To do:
+
+- Cleanup scripts
+- Better/more info per step in the scripts
+- Cleanup README.md
+
