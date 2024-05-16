@@ -6,6 +6,8 @@ Warning, still testing this.  This tool is provided without warranty. Any damage
 
 Proxmox Auto Installer for Raspbeerry Pi 4 and 5. 
 
+First successful test was on a Raspbeerry Pi 5 8GB on a NVME ssd
+
 ----------------------
 Installation Procedure
 ----------------------
