@@ -1,7 +1,7 @@
 # Proxmox Virtualisation on Raspbeerry Pi 4 and 5
 
 ----------------------
-Warning, still testing this
+Warning, still testing this.  This tool is provided without warranty. Any damage caused is your own responsibility.
 ----------------------
 
 Proxmox Auto Installer for Raspbeerry Pi 4 and 5. 
