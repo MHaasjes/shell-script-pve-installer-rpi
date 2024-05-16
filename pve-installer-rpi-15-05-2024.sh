@@ -1,3 +1,4 @@
+l01$
 #!/bin/bash
 
 # Check if the user has root privileges
@@ -37,9 +38,10 @@ rm /etc/hosts.bak
 
 sudo hostname "$newservername"
 
-sudo apt update -y && sudo apt upgrade -y
 
 echo "The /etc/hosts file has been updated successfully."
+
+#sudo apt update -y && sudo apt upgrade -y
 
 # You need to set the root password for access to Proxmox
 echo "You need to set the root password for access to Proxmox"
