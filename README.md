@@ -32,7 +32,8 @@ git clone https://github.com/MHaasjes/pve-installer-rpi.git
 Then, enter to the directory and change the permission.<br><br>
 ```
 cd pve-installer-rpi
-
+```
+```
 sudo chmod +x pve-installer-rpi.sh
 ```
 ```
