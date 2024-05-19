@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Check Root Privileges
-
 if [ $(whoami) != "root" ]; then
   echo "This script must be run with root privileges. Please use 'sudo' before running it again."
   exit 1
@@ -22,9 +21,7 @@ cp /etc/hosts /etc/hosts.bak
 
 # Edit the /etc/hosts file with the new server name
 sudo sed -i "s/localhost/$newservername/g" /etc/hosts
-
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
-
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hostname
 
 # Check if the change was successful
@@ -40,11 +37,12 @@ fi
 # Remove the backup file
 rm /etc/hosts.bak
 
+# no sure this is doing something
 sudo hostname "$newservername"
-
 
 echo "The /etc/hosts file has been updated successfully."
 
+#Need to test if this breaks the script
 #sudo apt update -y && sudo apt upgrade -y
 
 # You need to set the root password for access to Proxmox
