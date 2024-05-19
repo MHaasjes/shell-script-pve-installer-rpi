@@ -1,18 +1,22 @@
-# Proxmox Virtualisation on Raspbeerry Pi 4 and 5
+# Proxmox Virtual Environment on Raspberry Pi 4 and 5
+
+
+
 
 ----------------------
-Warning, still testing this.  This tool is provided without warranty. Any damage caused is your own responsibility.
+This tool is provided without warranty. Any damage caused is your own responsibility.
 ----------------------
 
-Proxmox Auto Installer for Raspbeerry Pi 4 and 5. 
+Proxmox Auto Installer for Raspberry Pi 4 and 5. 
 
-First successful test was on a Raspbeerry Pi 5 8GB on a NVME ssd
+
+Successfully tested this set of scripts on a  Raspberry Pi 5 8GB model on a NVME SSD.
 
 ----------------------
 Installation Procedure
 ----------------------
 
-Install 2024-03-15-raspios-bookworm-arm64-lite.img on a SD card, NVME or usb device and boot the raspberry pi.
+Install 2024-03-15-raspios-bookworm-arm64-lite.img on a SD card, NVME or USB device and boot the raspberry pi.
 
 At first, you will have to install git on your system.<br>
 
@@ -34,7 +38,7 @@ sudo chmod +x pve-installer-rpi.sh
 ```
 sudo chmod +x pve-installer-rpi-set-ip.sh
 ```
-You need to set your IP (DHCP makes it crash afther a reboot). Use this script or set it yourself:
+You need to set your IP (DHCP makes it crash after a reboot). Use this script or set it yourself:
 ```
 sudo ./pve-installer-rpi-set-ip.sh
 ```
