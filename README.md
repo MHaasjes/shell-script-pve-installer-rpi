@@ -1,5 +1,5 @@
 # Proxmox Virtual Environment on Raspberry Pi 4 and 5
-
+#
 
 
 
@@ -57,4 +57,5 @@ To do:
 - Better/more info per step in the scripts
 - Cleanup README.md
 - Test on Raspberry pi 4
+- Test on Raspberry pi 3 as witness Host
 
