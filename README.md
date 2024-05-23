@@ -59,4 +59,5 @@ To do:
 - Cleanup README.md
 - Test on Raspberry pi 4
 - Test on Raspberry pi 3 as witness Host
+- add message at end of pve-installer-rpi-set-ip.sh that you need to log back on if using ssh
 
