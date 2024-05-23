@@ -10,7 +10,8 @@ This tool is provided without warranty. Any damage caused is your own responsibi
 Proxmox Auto Installer for Raspberry Pi 4 and 5. 
 
 
-Successfully tested this set of scripts on a  Raspberry Pi 5 8GB model on a NVME SSD.
+Successfully tested this set of scripts on a  Raspberry Pi 5 8GB model on a NVME SSD (NVME HAT).
+Successfully tested this set of scripts on a  Raspberry Pi 4 4GB model on a NVME SSD (NVME USB adapter).
 
 ----------------------
 Installation Procedure
