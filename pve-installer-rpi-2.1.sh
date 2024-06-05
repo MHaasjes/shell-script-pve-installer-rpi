@@ -1,13 +1,13 @@
 #!/bin/bash
-
+Purple="\e[0;35m"
 # Check if the user has root privileges
 if [ $(whoami) != "root" ]; then
-  echo "This script must be run with root privileges."
+  echo -e "${Purple} This script must be run with root privileges."
   exit 1
 fi
 
 # Ask the user for the new server ip address
-echo "Enter the ip address for the new server:"
+ echo -e "${Purple} Enter the ip address for the new server:"
 read newipserver
 
 # Validate the user's input
@@ -17,7 +17,7 @@ if [ -z "$newipserver" ]; then
 fi
 
 # Ask the user for the new gateway ip address
-echo "Enter the ip address for the new gateway:"
+echo -e "${Purple} Enter the ip address for the new gateway:"
 read newipgateway
 
 # Validate the user's input
@@ -51,7 +51,7 @@ sudo nmcli con mod "Wired connection 1" ipv4.dns 8.8.8.8
 #sudo nmcli c down "Wired connection 1" && sudo nmcli c up "Wired connection 1"
 
 # Ask the user for the new server name
-echo "Enter the new server name:"
+echo -e "${Purple} Enter the new server name:"
 read newservername
 
 # Validate the user's input
@@ -68,13 +68,14 @@ cp /etc/hosts /etc/hosts.bak
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hostname
 #sudo sed "$a//$newservername $newipserver " /etc/hosts
-sudo sed -i -e '$a\'$'\n''$newservername $newipserver'
+
+sudo sed -i -e '$a\'$'\n''$newipserver       $newservername'  /etc/hosts
 
 # Check if the change was successful
 if grep "$newservername" /etc/hosts; then
-  echo "The line has been changed successfully to '$newservername'."
+  echo -e "${Purple} The line has been changed successfully to '$newservername'."
 else
-  echo "An error occurred while changing the line."
+  echo "An error occurred while changing the line." 
   # Restore the backup if there was an error
   cp /etc/hosts.bak /etc/hosts
   exit 1
@@ -86,14 +87,16 @@ rm /etc/hosts.bak
 # no sure this is doing something
 sudo hostname "$newservername"
 
-echo "The /etc/hosts file has been updated successfully."
+#echo "The /etc/hosts file has been updated successfully."
 
 #Need to test if this breaks the script
 #sudo apt update -y && sudo apt upgrade -y
 
 # You need to set the root password for access to Proxmox
-echo "You need to set the root password for access to Proxmox"
-echo "\e[35m You need to set the root password for access to Proxmox \e[0m"
+# echo "You need to set the root password for access to Proxmox"
+
+echo -e "${Purple}  You need to set the root password for access to Proxmox"
+
 sudo passwd root
 
 # Adding the Proxmox Ports repository
@@ -104,9 +107,19 @@ echo  "apt update"
 sudo apt update -y
 
 # apt install:
-echo "apt install"
+echo -e "${Purple} apt install"
+
 sudo apt install ifupdown2 -y
 
 sudo apt install proxmox-ve postfix open-iscsi pve-edk2-firmware-aarch64 -y
+
+#SWAP
+sudo dphys-swapfile swapoff
+#sudo nano /etc/dphys-swapfile
+#CONF_SWAPSIZE=1024
+sudo sed -i "s/100/2048/g" /etc/dphys-swapfile
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+
 
 sudo reboot
