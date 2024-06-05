@@ -1,13 +1,13 @@
 #!/bin/bash
-Purple="\e[0;35m"
+
 # Check if the user has root privileges
 if [ $(whoami) != "root" ]; then
-  echo -e "${Purple} This script must be run with root privileges."
-  exit 1
+  echo -e "\e[0;35m This script must be run with root privileges."
+    exit 1
 fi
 
 # Ask the user for the new server ip address
- echo -e "${Purple} Enter the ip address for the new server:"
+ echo -e "\e[0;35m Enter the ip address for the new server:"
 read newipserver
 
 # Validate the user's input
@@ -17,7 +17,7 @@ if [ -z "$newipserver" ]; then
 fi
 
 # Ask the user for the new gateway ip address
-echo -e "${Purple} Enter the ip address for the new gateway:"
+echo -e "\e[0;35m Enter the ip address for the new gateway:"
 read newipgateway
 
 # Validate the user's input
@@ -51,7 +51,7 @@ sudo nmcli con mod "Wired connection 1" ipv4.dns 8.8.8.8
 #sudo nmcli c down "Wired connection 1" && sudo nmcli c up "Wired connection 1"
 
 # Ask the user for the new server name
-echo -e "${Purple} Enter the new server name:"
+echo -e "\e[0;35m Enter the new server name:"
 read newservername
 
 # Validate the user's input
@@ -67,13 +67,13 @@ cp /etc/hosts /etc/hosts.bak
 #sudo sed -i "s/localhost/$newservername/g" /etc/hosts
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
 sudo sed -i "s/raspberrypi/$newservername/g" /etc/hostname
+sudo sed -i "s/127.0.1.1/$newipserver/g" /etc/hosts
 #sudo sed "$a//$newservername $newipserver " /etc/hosts
-
-sudo sed -i -e '$a\'$'\n''$newipserver       $newservername'  /etc/hosts
+#sudo sed -i -e '$a\'$'\n''$newipserver       $newservername'  /etc/hosts
 
 # Check if the change was successful
 if grep "$newservername" /etc/hosts; then
-  echo -e "${Purple} The line has been changed successfully to '$newservername'."
+  echo -e "\e[0;35m The line has been changed successfully to '$newservername'."
 else
   echo "An error occurred while changing the line." 
   # Restore the backup if there was an error
@@ -95,7 +95,7 @@ sudo hostname "$newservername"
 # You need to set the root password for access to Proxmox
 # echo "You need to set the root password for access to Proxmox"
 
-echo -e "${Purple}  You need to set the root password for access to Proxmox"
+echo -e "\e[0;35m  You need to set the root password for access to Proxmox"
 
 sudo passwd root
 
@@ -107,7 +107,7 @@ echo  "apt update"
 sudo apt update -y
 
 # apt install:
-echo -e "${Purple} apt install"
+echo -e "\e[0;35m apt install"
 
 sudo apt install ifupdown2 -y
 
