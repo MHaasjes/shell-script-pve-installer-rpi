@@ -121,5 +121,8 @@ sudo sed -i "s/100/2048/g" /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
+#/etc/network/interfaces
+sudo sed -i -e '$ a\auto lo\niface lo inet loopback \n \niface eth0 inet manual \n \nauto vmbr0 \niface vmbr0 inet static \n        address $newipserver/24 \n        gateway $newipgateway \n        bridge-ports eth0 \n        bridge-stp off \n        bridge-fd 0' /etc/network/interfaces
+
 
 sudo reboot
