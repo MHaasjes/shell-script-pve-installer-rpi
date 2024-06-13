@@ -114,7 +114,6 @@ sudo sed -i "s/100/2048/g" /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
-
 #/etc/network/interfaces
 sudo apt install ifupdown2 -y
 
@@ -129,8 +128,8 @@ sudo debconf-set-selections <<< "postfix postfix/mailname string $newservername"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'No configuration'"
 sudo apt-get install --assume-yes postfix -y
 
-sudo apt install proxmox-ve open-iscsi pve-edk2-firmware-aarch64 -y
+sudo apt install open-iscsi pve-edk2-firmware-aarch64 -y
 
-
+sudo apt install --assume-yes proxmox-ve -y
 
 sudo reboot
