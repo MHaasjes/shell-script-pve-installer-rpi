@@ -36,14 +36,14 @@ Then, enter to the directory and change the permission.<br><br>
 cd pve-installer-rpi
 ```
 ```
-sudo chmod +x pve-installer-rpi-2.1.sh
+sudo chmod +x pve-installer-rpi-2.2.sh
 ```
 You need to set your IP (DHCP makes it crash after a reboot), the script will ask you.
 
 Now lets install Proxmox VE:
 
 ```
-sudo ./pve-installer-rpi-2.1.sh
+sudo ./pve-installer-rpi-2.2.sh
 ```
 
 <br><br>
