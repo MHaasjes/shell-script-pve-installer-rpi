@@ -130,7 +130,7 @@ sudo apt-get install --assume-yes postfix -y
 
 sudo apt install open-iscsi pve-edk2-firmware-aarch64 -y
 
-sudo debconf-set-selections <<< "pve-manager pve-manager/pveport.list string 'N'"
-sudo apt install --assume-yes proxmox-ve -y
+#sudo apt install --assume-yes proxmox-ve -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install proxmox-ve -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
 
 sudo reboot
