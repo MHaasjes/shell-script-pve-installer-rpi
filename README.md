@@ -50,7 +50,6 @@ Now, let's install Proxmox VE:
 ```
 sudo ./pve-installer-rpi-2.3.sh
 ```
-
 <br><br>
 
 Post-Installation:
@@ -64,6 +63,7 @@ To do:
 One-liner Installation (for experienced users):
 -
 
+```
 sudo apt install git -y && git clone https://github.com/MHaasjes/pve-installer-rpi.git && cd pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
-
+```
 
