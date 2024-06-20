@@ -57,8 +57,6 @@ Post-Installation:
 Visit your web browser at https://your_ip_address:8006 for further configuration.
 You will be required to authenticate using username root and the root password.
 
-To do:
-- Test on Raspberry pi 3 as witness Host
 
 One-liner Installation (for experienced users):
 -
@@ -67,3 +65,7 @@ One-liner Installation (for experienced users):
 sudo apt install git -y && git clone https://github.com/MHaasjes/pve-installer-rpi.git && cd pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
 ```
 
+
+To do:
+-
+- Test on Raspberry pi 3 as witness Host
