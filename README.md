@@ -1,11 +1,7 @@
 # Proxmox Virtual Environment on Raspberry Pi 4 and 5
-#
 
-
-
-----------------------
 This tool is provided without warranty. Any damage caused is your own responsibility.
-----------------------
+-
 
 Proxmox Auto Installer for Raspberry Pi 4 and 5. 
 
@@ -14,9 +10,9 @@ Successfully tested this set of scripts on a  Raspberry Pi 5 8GB model on a NVME
 
 Successfully tested this set of scripts on a  Raspberry Pi 4 4GB model on a NVME SSD (NVME USB adapter).
 
-----------------------
+
 Installation Procedure
-----------------------
+-
 
 Install 2024-03-15-raspios-bookworm-arm64-lite.img on a SD card, NVME or USB device and boot the raspberry pi.
 
