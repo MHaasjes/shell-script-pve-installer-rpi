@@ -110,10 +110,10 @@ sudo hostname "$newservername"
 
 #######################################################################################
 # You need to set the root password for access to Proxmox
-echo
-echo -e "\e[0;35m You need to set the root password for access to Proxmox: \e[0m"
-echo
-sudo passwd root
+#echo
+#echo -e "\e[0;35m You need to set the root password for access to Proxmox: \e[0m"
+#echo
+#sudo passwd root
 #######################################################################################
 
 #######################################################################################
@@ -129,13 +129,13 @@ sudo apt update -y
 
 #######################################################################################
 # Setting swap from 100 to 2048
-echo
-echo  -e  "\e[0;35m Setting swap from 100 to 2048. \e[0m"
-echo
-sudo dphys-swapfile swapoff
-sudo sed -i "s/100/2048/g" /etc/dphys-swapfile
-sudo dphys-swapfile setup
-sudo dphys-swapfile swapon
+#echo
+#echo  -e  "\e[0;35m Setting swap from 100 to 2048. \e[0m"
+#echo
+#sudo dphys-swapfile swapoff
+#sudo sed -i "s/100/2048/g" /etc/dphys-swapfile
+#sudo dphys-swapfile setup
+#sudo dphys-swapfile swapon
 #######################################################################################
 
 #######################################################################################
