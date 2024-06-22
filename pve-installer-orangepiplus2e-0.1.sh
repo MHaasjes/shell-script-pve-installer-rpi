@@ -77,9 +77,9 @@ echo
 echo -e "\e[0;35m Editing the /etc/hosts file with the new server name. \e[0m"
 echo
 echo -e "\e[0;35m Editing /etc/hosts \e[0m"
-sudo sed -i "s/raspberrypi/$newservername/g" /etc/hosts
+sudo sed -i "s/orangepiplus2e/$newservername/g" /etc/hosts
 echo -e "\e[0;35m Editing /etc/hostname \e[0m"
-sudo sed -i "s/raspberrypi/$newservername/g" /etc/hostname
+sudo sed -i "s/orangepiplus2e/$newservername/g" /etc/hostname
 sudo sed -i "s/127.0.1.1/$newipserver/g" /etc/hosts
 # Check if the change was successful
 echo
