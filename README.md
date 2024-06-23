@@ -5,9 +5,13 @@ This tool is provided without warranty. Any damage caused is your own responsibi
 
 Proxmox Auto Installer for Raspberry Pi 4 and 5:
 -
-Successfully tested this scripts on a Raspberry Pi 5 8GB model on an NVMe SSD (NVMe HAT).<br>
-Successfully tested this scripts on a Raspberry Pi 4 4GB model on an NVMe SSD (NVMe USB adapter).
-
+Successfully tested this scripts on a Raspberry Pi 5 8GB model on an NVMe SSD (NVMe HAT). A VM will boot <br>
+Successfully tested this scripts on a Raspberry Pi 4 4GB model on an NVMe SSD (NVMe USB adapter) A VM will boot. <br>
+Successfully tested this scripts on a Raspberry Pi 3B on an SDcard. A VM will not boot. <br>
+<br>
+ISO used for test Vm (Bios set to OVMF / UEFI): <br>
+<br>
+https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/
 
 Requirements:
 -
