@@ -36,7 +36,7 @@ sudo sudo apt install git -y
 <br><br>Once git is installed, you are ready to clone the script.<br>
 
 ```
-git clone https://github.com/MHaasjes/pve-installer-rpi.git
+git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git
 ```
 <br><br>
 Then, enter the directory and change the permission.<br><br>
@@ -66,7 +66,7 @@ One-liner Installation (for experienced users):
 -
 
 ```
-sudo apt install git -y && git clone https://github.com/MHaasjes/pve-installer-rpi.git && cd pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
+sudo apt install git -y && git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git && cd pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
 ```
 
 
