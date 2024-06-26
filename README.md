@@ -41,7 +41,7 @@ git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git
 <br><br>
 Then, enter the directory and change the permission.<br><br>
 ```
-cd pve-installer-rpi
+cd shell-script-pve-installer-rpi
 ```
 ```
 sudo chmod +x pve-installer-rpi-2.3.sh
@@ -66,7 +66,7 @@ One-liner Installation (for experienced users):
 -
 
 ```
-sudo apt install git -y && git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git && cd pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
+sudo apt install git -y && git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git && cd shell-script-pve-installer-rpi && sudo chmod +x pve-installer-rpi-2.3.sh && sudo ./pve-installer-rpi-2.3.sh
 ```
 
 
