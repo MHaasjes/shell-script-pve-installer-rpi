@@ -21,7 +21,7 @@ A Raspberry Pi 4 or 5
 Prepare your Raspberry Pi:
 -
 
-Install the Raspberry Pi OS image: 2024-03-15-raspios-bookworm-arm64-lite.img on an SD card, NVMe drive, or USB device with enough storage for the OS.
+Install the Raspberry Pi OS image: 2024-03-15-raspios-bookworm-arm64-lite.img or 2024-07-04-raspios-bookworm-arm64-lite.img on an SD card, NVMe drive, or USB device with enough storage for the OS.
 Boot your Raspberry Pi from the prepared storage device.
 
 
