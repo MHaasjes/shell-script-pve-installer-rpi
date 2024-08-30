@@ -17,7 +17,7 @@ https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/
 Requirements:
 -
 
-A Raspberry Pi 4 or 5
+A Raspberry Pi 4, 5 or CM4
 
 Prepare your Raspberry Pi:
 -
