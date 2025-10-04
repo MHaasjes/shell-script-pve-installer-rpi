@@ -22,46 +22,11 @@ A Raspberry Pi 4, 5 or CM4
 Prepare your Raspberry Pi:
 -
 
-Install the Raspberry Pi OS image: 2024-03-15-raspios-bookworm-arm64-lite.img or 2024-07-04-raspios-bookworm-arm64-lite.img on an SD card, NVMe drive, or USB device with enough storage for the OS.
+Install the Raspberry Pi OS image: 2025-10-01-raspios-arm64-lite.img on an SD card, NVMe drive, or USB device with enough storage for the OS.
 Boot your Raspberry Pi from the prepared storage device.
 
 
 Installation Procedure:
--
-
-At first, you will need to install git on your system.<br>
-
-```
-sudo sudo apt install git -y
-```
-<br><br>Once git is installed, you are ready to clone the script.<br>
-
-```
-git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git
-```
-<br><br>
-Then, enter the directory and change the permission.<br><br>
-```
-cd shell-script-pve-installer-rpi
-```
-```
-sudo chmod +x pve-installer-rpi-2.3.sh
-```
-
-The script will prompt you to set your IP address. (You need to set your IP, DHCP makes it crash after a reboot)
-
-Now, let's install Proxmox VE:
-
-```
-sudo ./pve-installer-rpi-2.3.sh
-```
-<br><br>
-
-Post-Installation:
--
-Visit your web browser at https://your_ip_address:8006 for further configuration.
-You will be required to authenticate using username root and the root password.
-
 
 One-liner Installation (for experienced users):
 -
