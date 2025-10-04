@@ -32,7 +32,7 @@ One-liner Installation (for experienced users):
 -
 
 ```
-sudo apt install git -y && git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git && cd shell-script-pve-installer-rpi && sudo chmod +x pve-installer-rpi-1.0.sh && sudo ./pve-installer-rpi-2.3.sh
+sudo apt install git -y && git clone https://github.com/MHaasjes/shell-script-pve-installer-rpi.git && cd shell-script-pve-installer-rpi && sudo chmod +x pve-installer-rpi-1.0.sh && sudo ./pve-installer-rpi-1.0.sh
 ```
 
 
