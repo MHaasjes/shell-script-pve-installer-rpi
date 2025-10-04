@@ -126,6 +126,8 @@ curl -L https://mirrors.lierfang.com/pxcloud/lierfang.gpg -o /etc/apt/trusted.gp
 su
 source /etc/os-release
 echo "deb  https://mirrors.lierfang.com/pxcloud/pxvirt $VERSION_CODENAME main">/etc/apt/sources.list.d/pxvirt-sources.list
+exit
+exit
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 39DE63C7D57A32124785E63DB859507D6B1F46D3
 gpg --export 39DE63C7D57A32124785E63DB859507D6B1F46D3 | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/pxcloud.gpg
